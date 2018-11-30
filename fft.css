@@ -1,4 +1,4 @@
-.input-signal, .output {
+.output {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -6,4 +6,12 @@
 }
 .output > div {
   width: 10px;
+}
+.axis path,
+.axis line {
+  stroke: rgb(218, 82, 63)
+}
+.axis text {
+  font-size: 14px;
+  fill: rgb(218, 82, 63)
 }

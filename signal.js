@@ -31,16 +31,26 @@ class Complex {
     }
 
 }
-let basicSignals = [
-    new Complex(1, 3),
-    new Complex(1, 4),
-    new Complex(5, 1),
-    new Complex(-1, 5),
-    new Complex(-1, 9),
-    new Complex(-1, -2),
-    new Complex(6, -1),
-    new Complex(9, -5),
+let sigArr = [
+    [3.5, 23],
+    [2.9, 6],
+    [26, 49],
+    [5.6, 77],
+    [35,44],
+    [4.3, 6.3],
+    [34,26.3],
+    [36.3, 22],
+    [32, 23],
+    [3.3, 65],
+    [3.5, 4.3],
+    [5.3, 15],
+    [31.4, 24.6],
+    [14, 3],
+    [3.2, 13],
+    [36,48]
 ]
+
+let signals = sigArr.map(sig => new Complex(sig[0], sig[1]))
 function genSig(sig, n) {
   function longer(n) {
     if (n > 0) {
@@ -52,8 +62,9 @@ function genSig(sig, n) {
   }
   return longer(n)
 }
-let signals = genSig(basicSignals, 0)
+// let signals = genSig(basicSignals, 0)
 module.exports = {
+    sigArr,
     signals,
     Complex
 }
