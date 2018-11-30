@@ -1,0 +1,20 @@
+{
+  "name": "fft",
+  "version": "1.0.0",
+  "description": "基-2 FFT",
+  "main": "fft.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -c webpack.config.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.7.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
