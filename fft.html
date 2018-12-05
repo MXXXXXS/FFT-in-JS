@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,31 @@
   <link rel="stylesheet" href="./fft.css">
   <title>visualize of fft</title>
 </head>
+
 <body>
-  <div class="input-signal"></div>
+  <div class="input">
+    <label>生成数量
+    <input type="number" name="num" id="num" min="0" max="1024">
+  </label>
+    <div id="x">
+      <label>x坐标范围
+      <input type="number" name="rMin" id="rMin" min="-1000" max="1000">
+      <input type="number" name="rMax" id="rMax" min="-1000" max="1000">
+    </label>
+    </div>
+    <div id="y">
+      <label>y坐标范围
+      <input type="number" name="iMin" id="iMin" min="-1000" max="1000">
+      <input type="number" name="iMax" id="iMax" min="-1000" max="1000">
+    </label>
+    </div>
+  </div>
+<div class="input">
+  <div id="generate">生成</div>
+  <div id="fft">fft变换</div>
+</div>
+  <div class="input-signal">
+  </div>
   <div class="output-signal">
     <div class="output amplitude"></div>
     <div class="output phase"></div>
@@ -17,4 +41,5 @@
   </div>
   <script src="./dist/main.js"></script>
 </body>
+
 </html>
