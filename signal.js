@@ -31,7 +31,7 @@ class Complex {
   }
 }
 
-function sigArr(n, xScale, yScale) {
+function genSigArr(n, xScale, yScale) {
   let sig = []
   while (sig.length < n) {
     sig.push([Math.random() * (xScale[1] - xScale[0]) + xScale[0],
@@ -45,13 +45,13 @@ function sig(nOrArr, xScale, yScale) {
   return arguments.length == 1 && Array.isArray(arguments[0])
   ? nOrArr.map(sig => new Complex(sig[0], sig[1]))
   : arguments.length == 3 
-  ? sigArr(nOrArr, xScale, yScale).map(sig => new Complex(sig[0], sig[1]))
+  ? genSigArr(nOrArr, xScale, yScale).map(sig => new Complex(sig[0], sig[1]))
   : undefined
 }
 
 // let signals = genSig(basicSignals, 0)
 module.exports = {
-  sigArr,
+  genSigArr,
   sig,
   Complex
 }
